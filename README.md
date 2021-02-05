@@ -26,15 +26,20 @@ python3 Calc_DeltaDepth.py <Sample1_MovingAverage_merged.tsv> <Sample2_MovingAve
 - `<Output_file_name.tsv>` : columns in this order.
   - chromosome
   - center position of each window
-  - 95% confidence value 
-  - 99% confidence value
+  - 95% confidence line
+  - 99% confidence line
   - differencee of read depth(delta-depth) between Sample1 and Sample2 at each window
-
+ 
 ### Visualization of moving average of read depth
-Plot 
+Plotting the moving average of two samples, respectively : 
+```
+Rscript Plot_MovingAverage.R  <Sample1_MovingAverage_merged.tsv> <Sample2_MovingAverage_merged.tsv> <Output_prefix>
+```
+The output named <output_prefix>\_chr<1A~7D>.png will be generated.
 
+Plotting the delta-depth of moving average:
 ```
 Rscript Plot_DeltaDepth.R <Calculated_delta-depth.tsv> <Output_prefix>
 ```
-The output files named <output_prefix>\_chr<1A~7D>.png will be generated.
+The output named <output_prefix>\_chr<1A~7D>.png will be generated.
 
