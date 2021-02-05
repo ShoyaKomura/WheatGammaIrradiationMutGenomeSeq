@@ -8,7 +8,8 @@ Script that
 ```
 python3 Calc_MovingAverage.py <Window_size> <Step_size> <Depth-of-coverage_at_each_position.tsv.gz> <Output_file_name.tsv>
 ```
-- Depth-of-coverage_at_each_position.tsv.gz : Use `samtools depth` with -a option to compute the depth at each position from BAM.
+- `<Depth-of-coverage_at_each_position.tsv.gz>` : gzip compression file of read depth per chromosome.  
+　　Use `samtools depth` with -a option to compute the depth at each position from BAM.
 
 - `<Output_file_name.tsv>` : columns in this order.
   - chromosome
