@@ -27,9 +27,10 @@ python3 Calc_DeltaDepth.py <Sample1_MovingAverage_merged.tsv> <Sample2_MovingAve
   - center position of each window
   - 95% confidence value 
   - 99% confidence value
-  - delta depth of each window
+  - differencee of read depth(delta-depth) between Sample1 and Sample2 at each window
 
 ### Visualization of moving average of read depth
+Plot 
 
 ```
 Rscript Plot_DeltaDepth.R <Calculated_delta-depth.tsv> <Output_prefix>
