@@ -9,6 +9,7 @@ Script that
 python3 Calc_MovingAverage.py <Window_size> <Step_size> <Depth-of-coverage_at_each_position.tsv.gz> <Output_file_name.tsv>
 ```
 - Depth-of-coverage_at_each_position.tsv.gz : Use `samtools depth` with -a option to compute the depth at each position from BAM.
+
 When you calculated the moving average of all chromosomes, merge the results and sort by chrosome and the position.
 
 Then, calculate delta-depth between two samples.
