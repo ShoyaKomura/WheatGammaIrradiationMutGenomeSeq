@@ -10,15 +10,22 @@ python3 Calc_MovingAverage.py <Window_size> <Step_size> <Depth-of-coverage_at_ea
 ```
 - Depth-of-coverage_at_each_position.tsv.gz : Use `samtools depth` with -a option to compute the depth at each position from BAM.
 
+- `<Output_file_name.tsv>` : columns in this order.
+  - chromosome
+  - center position of each window
+  - read depth at center position of each window
+  - average depth of each window
+
 When you calculated the moving average of all chromosomes, merge the results and sort by chrosome and the position.
 
-Then, calculate delta-depth between two samples.
+If you calculate delta-depth between two samples, run `Calc_DeltaDepth.py`.
 ```
 python3 Calc_DeltaDepth.py <Sample1_MovingAverage_merged.tsv> <Sample2_MovingAverage_merged.tsv> <Output_file_name.tsv>
 ```
 ### Visualization of moving average of read depth
+
 ```
 Rscript Plot_DeltaDepth.R <Calculated_delta-depth.tsv> <Output_prefix>
 ```
-The output files named <output_prefix>\_chr<1A ~ 7D>.png will be generated.
+The output files named <output_prefix>\_chr<1A~7D>.png will be generated.
 
