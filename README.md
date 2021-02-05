@@ -37,6 +37,7 @@ Rscript Plot_MovingAverage.R  <Sample1_MovingAverage_merged.tsv> <Sample2_Moving
 ```
 - The output named <output_prefix>\_chr<1A~7D>.png will be generated.
 
+
 Plotting the delta-depth of moving average:
 ```
 Rscript Plot_DeltaDepth.R <Calculated_delta-depth.tsv> <Output_prefix>
