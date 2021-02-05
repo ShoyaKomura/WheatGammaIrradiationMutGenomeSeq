@@ -22,6 +22,13 @@ If you calculate delta-depth between two samples, run `Calc_DeltaDepth.py`.
 ```
 python3 Calc_DeltaDepth.py <Sample1_MovingAverage_merged.tsv> <Sample2_MovingAverage_merged.tsv> <Output_file_name.tsv>
 ```
+- `<Output_file_name.tsv>` : columns in this order.
+  - chromosome
+  - center position of each window
+  - 95% confidence value 
+  - 99% confidence value
+  - delta depth of each window
+
 ### Visualization of moving average of read depth
 
 ```
