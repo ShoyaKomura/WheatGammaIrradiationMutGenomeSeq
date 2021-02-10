@@ -5,7 +5,7 @@ Script that
 
 # 1. Detection of deletions incued by gamma-irradiation
 ## Plot the moving average for each of the two samples.
-####Calculate moving average  
+### Calculate moving average  
 At first, count read dept hat all position from BAM.
 ```
 samtools depth -a -r <chr1A-chr7D> <Input.bam> | gzip > <Depth-of-coverage_at_each_position_chrXX.tsv.gz> 
@@ -21,7 +21,7 @@ python3 Calc_MovingAverage.py <Window_size> <Step_size> <Depth-of-coverage_at_ea
   - read depth at center position of each window
   - average depth of each window
 
-####Plot moving average
+### Plot moving average
 After the results have been merged and sorted by chromosome and position, run it.
 ```
 Rscript Plot_MovingAverage.R  <Sample1_MovingAverage_merged.tsv> <Sample2_MovingAverage_merged.tsv> <Output_prefix>
@@ -29,7 +29,7 @@ Rscript Plot_MovingAverage.R  <Sample1_MovingAverage_merged.tsv> <Sample2_Moving
 - The output named <output_prefix>\_chr<1A~7D>.png will be generated.
 
 ## Plot delta-depth of two samples.
-####Calculate delta-depth
+### Calculate delta-depth
 At first, count read dept hat all position from BAM.
 ```
 samtools depth -a -r <chr1A-chr7D> <Input.bam> | gzip > <Depth-of-coverage_at_each_position_chrXX.tsv.gz> 
@@ -56,7 +56,7 @@ python3 Calc_DeltaDepth.py <Sample1_MovingAverage_merged.tsv> <Sample2_MovingAve
   - 99% confidence line
   - differencee of read depth(delta-depth) between Sample1 and Sample2 at each window
  
-####Plot delta-depth
+### Plot delta-depth
 ```
 Rscript Plot_DeltaDepth.R <Calculated_delta-depth.tsv> <Output_prefix>
 ```
