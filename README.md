@@ -3,8 +3,8 @@ Script that
 1. detects deletion or duplication induced by gamma-irradiation in bread wheat (*Triticum aestivum*) based on moving average of read depth.
 2. shows snp position or snp density over the chromosomes of wheat.
 
-## 1. Detection of gamma-irradiation induced deletions
-### Calculate moving average
+# 1. Detection of gamma-irradiation induced deletions
+## Calculate moving average
 ```
 python3 Calc_MovingAverage.py <Window_size> <Step_size> <Depth-of-coverage_at_each_position.tsv.gz> <Output_file_name.tsv>
 ```
@@ -30,7 +30,7 @@ python3 Calc_DeltaDepth.py <Sample1_MovingAverage_merged.tsv> <Sample2_MovingAve
   - 99% confidence line
   - differencee of read depth(delta-depth) between Sample1 and Sample2 at each window
  
-### Visualization of moving average of read depth
+## Visualization of moving average of read depth
 Plotting the moving average of two samples, respectively : 
 ```
 Rscript Plot_MovingAverage.R  <Sample1_MovingAverage_merged.tsv> <Sample2_MovingAverage_merged.tsv> <Output_prefix>
@@ -43,8 +43,8 @@ Rscript Plot_DeltaDepth.R <Calculated_delta-depth.tsv> <Output_prefix>
 ```
 - The output named <output_prefix>\_chr<1A~7D>.png will be generated.
 
-## 2. Visualization of SNP position or SNP density
-### Plot SNP position
+# 2. Visualization of SNP position or SNP density
+## Plot SNP position
 At first, convert VCF file to input format.
 ```
 python3 Vcf2SNP_position.py <Input_file.vcf> <Output_file.tsv>
@@ -59,7 +59,7 @@ Rscript Plot_SNP_position.R <Input_file.tsv> <Output_prefix>
 ```
 - The output named <output_prefix>\_chr<1A~7D>.png will be generated.
 
-### Plot SNP density
+## Plot SNP density
 Count the number of SNPs per each window
 ```
 python3 Count_SNPs_per_window.py <Window_size> <Input.vcf>
