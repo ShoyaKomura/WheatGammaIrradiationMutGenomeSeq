@@ -7,7 +7,7 @@
  - [Plot SNP position](https://github.com/ShoyaKomura/WheatGammaIrradiationMutGenomeSeq/blob/main/README.md#plot-snp-position)
  - [Plot SNP density](https://github.com/ShoyaKomura/WheatGammaIrradiationMutGenomeSeq/blob/main/README.md#plot-snp-density)
 
-# 1. Detection of deletions incued by gamma-irradiation
+## 1. Detection of deletions incued by gamma-irradiation
 ## Plot the moving average for each of the two samples.
 ### Calculate moving average  
 At first, count read dept hat all position from BAM.
@@ -66,7 +66,7 @@ Rscript Plot_DeltaDepth.R <Calculated_delta-depth.tsv> <Output_prefix>
 ```
 - The output named <output_prefix>\_chr<1A~7D>.png will be generated.
 
-# 2. Visualization of SNP position or SNP density
+## 2. Visualization of SNP position or SNP density
 ## Plot SNP position
 At first, convert VCF file to input format.
 ```
