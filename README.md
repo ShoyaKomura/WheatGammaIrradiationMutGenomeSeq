@@ -44,7 +44,7 @@ Rscript Plot_DeltaDepth.R <Calculated_delta-depth.tsv> <Output_prefix>
 - The output named <output_prefix>\_chr<1A~7D>.png will be generated.
 
 ## 2. Visualization of SNP position or SNP density
-### Use SNP position
+### Plot SNP position
 At first, convert VCF file to input format.
 ```
 python3 Vcf2SNP_position.py <Input_file.vcf> <Output_file.tsv>
@@ -59,12 +59,16 @@ Rscript Plot_SNP_position.R <Input_file.tsv> <Output_prefix>
 ```
 - The output named <output_prefix>\_chr<1A~7D>.png will be generated.
 
-### Use SNP density
-At first, convert VCF file to input format.
+### Plot SNP density
+Count the number of SNPs per each window
 ```
-python3 Vcf2SNP_position.py <Input_file.vcf> <Output_file.tsv>
+python3 Count_SNPs_per_window.py <Window_size> <Input.vcf>
 ```
-- `<Output_file_name.tsv>` : columns in this order.
+- The output file `Number_of_SNPs.tsv` will be generated.
+  - `Number_of_SNPs.tsv`: columns in this order.
   - chromosome
-  - SNP position 
+  - start position
+  - end position
+  - number of SNPs from start position to end position
 
+Plot the SNP denstiy:
