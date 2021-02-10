@@ -3,23 +3,49 @@ Script that
 1. detects deletion or duplication induced by gamma-irradiation in bread wheat (*Triticum aestivum*) based on moving average of read depth.
 2. shows snp position or snp density over the chromosomes of wheat.
 
-# 1. Detection of gamma-irradiation induced deletions
-## Calculate moving average
+# 1. Detection of deletions incued by gamma-irradiation
+## Plot the moving average for each of the two samples.
+**Calculate moving average**
+At first, count read dept hat all position from BAM.
 ```
-python3 Calc_MovingAverage.py <Window_size> <Step_size> <Depth-of-coverage_at_each_position.tsv.gz> <Output_file_name.tsv>
+samtools depth -a -r <chr1A-chr7D> <Input.bam> | gzip > <Depth-of-coverage_at_each_position_chrXX.tsv.gz> 
+```
+Then, calculate the moving average of read depth for each chromosome.
+```
+python3 Calc_MovingAverage.py <Window_size> <Step_size> <Depth-of-coverage_at_each_position_chrXX.tsv.gz> <Output_file.tsv>
 ```
 - `<Depth-of-coverage_at_each_position.tsv.gz>` : gzip compression file of read depth per chromosome.  
-　　Use `samtools depth -a` to count read depth at all position from BAM.
-
-- `<Output_file_name.tsv>` : columns in this order.
+- `<Output_file.tsv>` : columns in this order.
   - chromosome
   - center position of each window
   - read depth at center position of each window
   - average depth of each window
 
-When you calculated the moving average of all chromosomes, merge the results and sort by chrosome and the position.
+**Plot moving average**
+After the results have been merged and sorted by chromosome and position, run it.
+```
+Rscript Plot_MovingAverage.R  <Sample1_MovingAverage_merged.tsv> <Sample2_MovingAverage_merged.tsv> <Output_prefix>
+```
+- The output named <output_prefix>\_chr<1A~7D>.png will be generated.
 
-If you calculate delta-depth between two samples, run `Calc_DeltaDepth.py`.
+## Plot delta-depth of two samples.
+**Calculate delta-depth**
+At first, count read dept hat all position from BAM.
+```
+samtools depth -a -r <chr1A-chr7D> <Input.bam> | gzip > <Depth-of-coverage_at_each_position_chrXX.tsv.gz> 
+```
+Then, calculate the moving average of read depth for each chromosome.
+```
+python3 Calc_MovingAverage.py <Window_size> <Step_size> <Depth-of-coverage_at_each_position_chrXX.tsv.gz> <Output_file.tsv>
+```
+- `<Depth-of-coverage_at_each_position.tsv.gz>` : gzip compression file of read depth per chromosome.  
+- `<Output_file.tsv>` : columns in this order.
+  - chromosome
+  - center position of each window
+  - read depth at center position of each window
+  - average depth of each window
+
+After the results have been merged and sorted by chromosome and position, run it.
 ```
 python3 Calc_DeltaDepth.py <Sample1_MovingAverage_merged.tsv> <Sample2_MovingAverage_merged.tsv> <Output_file_name.tsv>
 ```
@@ -30,14 +56,7 @@ python3 Calc_DeltaDepth.py <Sample1_MovingAverage_merged.tsv> <Sample2_MovingAve
   - 99% confidence line
   - differencee of read depth(delta-depth) between Sample1 and Sample2 at each window
  
-## Visualization of moving average of read depth
-Plotting the moving average of two samples, respectively : 
-```
-Rscript Plot_MovingAverage.R  <Sample1_MovingAverage_merged.tsv> <Sample2_MovingAverage_merged.tsv> <Output_prefix>
-```
-- The output named <output_prefix>\_chr<1A~7D>.png will be generated.
-  
-Plotting the delta-depth of moving average:
+**Plot delta-depth**
 ```
 Rscript Plot_DeltaDepth.R <Calculated_delta-depth.tsv> <Output_prefix>
 ```
