@@ -22,7 +22,7 @@ python3 Calc_MovingAverage.py <Window_size> <Step_size> <Depth-of-coverage_at_ea
   - average depth of each window
 
 ### Plot moving average
-**After the results have been merged and sorted by chromosome and position, run it.**
+After the results have been **merged and sorted** by chromosome and position, run it.
 ```
 Rscript Plot_MovingAverage.R  <Sample1_MovingAverage_merged.tsv> <Sample2_MovingAverage_merged.tsv> <Output_prefix>
 ```
