@@ -1,6 +1,6 @@
 # WheatGammaIrradiationMutGenomeSeq
 Script that 
-1. detects deletion or duplication induced by gamma-irradiation in bread wheat (*Triticum aestivum*) based on moving average of read depth.
+1. [detects deletion or duplication induced by gamma-irradiation in bread wheat (*Triticum aestivum*) based on moving average of read depth.](https://github.com/ShoyaKomura/WheatGammaIrradiationMutGenomeSeq/blob/main/README.md#1-detection-of-deletions-incued-by-gamma-irradiation)
 2. shows snp position or snp density over the chromosomes of wheat.
 
 # 1. Detection of deletions incued by gamma-irradiation
