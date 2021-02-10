@@ -1,9 +1,9 @@
 # WheatGammaIrradiationMutGenomeSeq
 Script that 
-1. Detects deletion or duplication induced by gamma-irradiation in wheat based on moving average of read depth.
+### 1. Detects deletion or duplication induced by gamma-irradiation in wheat based on moving average of read depth.
  - [Plot the moving average for each of the two samples.](https://github.com/ShoyaKomura/WheatGammaIrradiationMutGenomeSeq/blob/main/README.md#plot-the-moving-average-for-each-of-the-two-samples)
  - [Plot delta-depth of two samples.](https://github.com/ShoyaKomura/WheatGammaIrradiationMutGenomeSeq/blob/main/README.md#plot-delta-depth-of-two-samples)
-2. Shows snp position or snp density over the chromosomes of wheat.
+### 2. Shows snp position or snp density over the chromosomes of wheat.
  - [Plot SNP position](https://github.com/ShoyaKomura/WheatGammaIrradiationMutGenomeSeq/blob/main/README.md#plot-snp-position)
  - [Plot SNP density](https://github.com/ShoyaKomura/WheatGammaIrradiationMutGenomeSeq/blob/main/README.md#plot-snp-density)
 
