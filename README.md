@@ -72,3 +72,7 @@ python3 Count_SNPs_per_window.py <Window_size> <Input.vcf>
   - number of SNPs from start position to end position
 
 Plot the SNP denstiy:
+```
+Rscript Plot_SNP_density.R <Input_file.tsv> <Output_prefix>
+```
+- The output named <output_prefix>\_chr<1A~7D>.png will be generated.
