@@ -4,7 +4,7 @@ Script that
  - [Plot the moving average for each of the two samples.](https://github.com/ShoyaKomura/WheatGammaIrradiationMutGenomeSeq/blob/main/README.md#plot-the-moving-average-for-each-of-the-two-samples)
  - [Plot delta-depth of two samples.](https://github.com/ShoyaKomura/WheatGammaIrradiationMutGenomeSeq/blob/main/README.md#plot-delta-depth-of-two-samples)
 2. Shows snp position or snp density over the chromosomes of wheat.
- - Plot SNP position
+ - [Plot SNP position](https://github.com/ShoyaKomura/WheatGammaIrradiationMutGenomeSeq/blob/main/README.md#plot-snp-position)
  - Plot SNP density
 
 # 1. Detection of deletions incued by gamma-irradiation
