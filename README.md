@@ -10,7 +10,7 @@
 ## 1. Detection of deletions incued by gamma-irradiation
 ## Plot the moving average for each of the two samples.
 ### Calculate moving average  
-At first, count read dept hat all position from BAM.
+At first, count read depth at all position from BAM.
 ```
 samtools depth -a -r <chr1A-chr7D> <Input.bam> | gzip > <Depth-of-coverage_at_each_position_chrXX.tsv.gz> 
 ```
@@ -32,7 +32,7 @@ Rscript Plot_MovingAverage.R  <Sample1_MovingAverage_merged.tsv> <Sample2_Moving
 ```
 - The output named <output_prefix>\_chr<1A~7D>.png will be generated.
 
-## Plot delta-depth of two samples.
+## Plot delta-depth between two samples.
 ### Calculate delta-depth
 At first, count read dept hat all position from BAM.
 ```
