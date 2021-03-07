@@ -1,13 +1,13 @@
 # WheatGammaIrradiationMutGenomeSeq
-**1. Detect deletion or duplication induced by gamma-irradiation in wheat based on moving average of read depth.**
+**1. Calculate and plot moving average of depth-of-coverage.**
  - [Plot the moving average for each of the two samples.](https://github.com/ShoyaKomura/WheatGammaIrradiationMutGenomeSeq/blob/main/README.md#plot-the-moving-average-for-each-of-the-two-samples)
- - [Plot delta-depth of two samples.](https://github.com/ShoyaKomura/WheatGammaIrradiationMutGenomeSeq/blob/main/README.md#plot-delta-depth-of-two-samples)
+ - [Calculate and plot the difference(delta-depth) between two samples.](https://github.com/ShoyaKomura/WheatGammaIrradiationMutGenomeSeq/blob/main/README.md#plot-delta-depth-of-two-samples)
 
   **2. Show snp position or snp density over the chromosomes of wheat.**
  - [Plot SNP position](https://github.com/ShoyaKomura/WheatGammaIrradiationMutGenomeSeq/blob/main/README.md#plot-snp-position)
  - [Plot SNP density](https://github.com/ShoyaKomura/WheatGammaIrradiationMutGenomeSeq/blob/main/README.md#plot-snp-density)
 
-## 1. Detection of deletions incued by gamma-irradiation
+## 1. Calculate and plot moving average of depth-of-coverage
 ## Plot the moving average for each of the two samples.
 ### Calculate moving average  
 At first, count read depth at all position from BAM.
@@ -32,7 +32,7 @@ Rscript Plot_MovingAverage.R  <Sample1_MovingAverage_merged.tsv> <Sample2_Moving
 ```
 - The output named <output_prefix>\_chr<1A~7D>.png will be generated.
 
-## Plot delta-depth between two samples.
+## Calculate and plot the difference(delta-depth) between two samples.
 ### Calculate delta-depth
 At first, count read dept hat all position from BAM.
 ```
