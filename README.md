@@ -10,7 +10,7 @@ Here is a source code repository for the following purpose, targeting wheat.
  - [SNP density](https://github.com/ShoyaKomura/WheatGammaIrradiationMutGenomeSeq/blob/main/README.md#plot-snp-density)
 
 ## 1. Showing the moving average of depth-of-coverage
-## The moving average for each of the two samples. 
+### The moving average for each of the two samples. 
 At first, count read depth at all position from BAM.
 ```
 samtools depth -a -r <chr1A-chr7D> <Input.bam> | gzip > <Depth-of-coverage_at_each_position_chrXX.tsv.gz> 
@@ -32,7 +32,7 @@ Rscript Plot_MovingAverage.R  <Sample1_MovingAverage_merged.tsv> <Sample2_Moving
 ```
 - The output named <output_prefix>\_chr<1A~7D>.png will be generated.
 
-## The difference of moving average(delta-depth) between two samples.
+### The difference of moving average(delta-depth) between two samples.
 At first, count read dept hat all position from BAM.
 ```
 samtools depth -a -r <chr1A-chr7D> <Input.bam> | gzip > <Depth-of-coverage_at_each_position_chrXX.tsv.gz> 
