@@ -1,15 +1,15 @@
 # WheatGammaIrradiationMutGenomeSeq
 This is the source code for the following purposes.  
 **1. Showing the moving average of depth-of-coverage.**
- - [Plot the moving average for each of the two samples.](https://github.com/ShoyaKomura/WheatGammaIrradiationMutGenomeSeq/blob/main/README.md#plot-the-moving-average-for-each-of-the-two-samples)
- - [Calculate and plot the difference(delta-depth) between two samples.](https://github.com/ShoyaKomura/WheatGammaIrradiationMutGenomeSeq/blob/main/README.md#plot-delta-depth-of-two-samples)
+ - [The moving average for each of the two samples.](https://github.com/ShoyaKomura/WheatGammaIrradiationMutGenomeSeq/blob/main/README.md#plot-the-moving-average-for-each-of-the-two-samples)
+ - [The difference of moving average(delta-depth) between two samples.](https://github.com/ShoyaKomura/WheatGammaIrradiationMutGenomeSeq/blob/main/README.md#plot-delta-depth-of-two-samples)
 
   **2. Showing snp position or snp density over the chromosomes of Chinese Spring(IWGSC v1.0).**
- - [Plot SNP position](https://github.com/ShoyaKomura/WheatGammaIrradiationMutGenomeSeq/blob/main/README.md#plot-snp-position)
- - [Plot SNP density](https://github.com/ShoyaKomura/WheatGammaIrradiationMutGenomeSeq/blob/main/README.md#plot-snp-density)
+ - [SNP position](https://github.com/ShoyaKomura/WheatGammaIrradiationMutGenomeSeq/blob/main/README.md#plot-snp-position)
+ - [SNP density](https://github.com/ShoyaKomura/WheatGammaIrradiationMutGenomeSeq/blob/main/README.md#plot-snp-density)
 
 ## 1. Showing the moving average of depth-of-coverage
-## Plot the moving average for each of the two samples.
+## The moving average for each of the two samples.
 ### Calculate moving average  
 At first, count read depth at all position from BAM.
 ```
@@ -33,7 +33,7 @@ Rscript Plot_MovingAverage.R  <Sample1_MovingAverage_merged.tsv> <Sample2_Moving
 ```
 - The output named <output_prefix>\_chr<1A~7D>.png will be generated.
 
-## Calculate and plot the difference(delta-depth) between two samples.
+## The difference of moving average(delta-depth) between two samples.
 ### Calculate delta-depth
 At first, count read dept hat all position from BAM.
 ```
@@ -67,8 +67,8 @@ Rscript Plot_DeltaDepth.R <Calculated_delta-depth.tsv> <Output_prefix>
 ```
 - The output named <output_prefix>\_chr<1A~7D>.png will be generated.
 
-## 2. Visualization of SNP position or SNP density
-## Plot SNP position
+## 2. Showing snp position or snp density over the chromosomes of Chinese Spring(IWGSC v1.0).
+## SNP position
 At first, convert VCF file to input format.
 ```
 python3 Vcf2SNP_position.py <Input_file.vcf> <Output_file.tsv>
@@ -83,7 +83,7 @@ Rscript Plot_SNP_position.R <Input_file.tsv> <Output_prefix>
 ```
 - The output named <output_prefix>\_chr<1A~7D>.png will be generated.
 
-## Plot SNP density
+## SNP density
 Count the number of SNPs per each window
 ```
 python3 Count_SNPs_per_window.py <Window_size> <Input.vcf>
