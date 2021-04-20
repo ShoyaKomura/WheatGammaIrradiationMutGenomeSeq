@@ -10,8 +10,7 @@ Here is a source code repository for the following purpose, targeting wheat.
  - [SNP density](https://github.com/ShoyaKomura/WheatGammaIrradiationMutGenomeSeq/blob/main/README.md#plot-snp-density)
 
 ## 1. Showing the moving average of depth-of-coverage
-## The moving average for each of the two samples.
-### Calculate moving average  
+## The moving average for each of the two samples. 
 At first, count read depth at all position from BAM.
 ```
 samtools depth -a -r <chr1A-chr7D> <Input.bam> | gzip > <Depth-of-coverage_at_each_position_chrXX.tsv.gz> 
@@ -27,7 +26,6 @@ python3 Calc_MovingAverage.py <Window_size> <Step_size> <Depth-of-coverage_at_ea
   - read depth at center position of each window
   - average depth of each window
 
-### Plot moving average
 After the results have been **_merged and sorted_** by chromosome and position, run it.
 ```
 Rscript Plot_MovingAverage.R  <Sample1_MovingAverage_merged.tsv> <Sample2_MovingAverage_merged.tsv> <Output_prefix>
@@ -35,7 +33,6 @@ Rscript Plot_MovingAverage.R  <Sample1_MovingAverage_merged.tsv> <Sample2_Moving
 - The output named <output_prefix>\_chr<1A~7D>.png will be generated.
 
 ## The difference of moving average(delta-depth) between two samples.
-### Calculate delta-depth
 At first, count read dept hat all position from BAM.
 ```
 samtools depth -a -r <chr1A-chr7D> <Input.bam> | gzip > <Depth-of-coverage_at_each_position_chrXX.tsv.gz> 
@@ -69,7 +66,7 @@ Rscript Plot_DeltaDepth.R <Calculated_delta-depth.tsv> <Output_prefix>
 - The output named <output_prefix>\_chr<1A~7D>.png will be generated.
 
 ## 2. Showing snp position or snp density over the chromosomes of Chinese Spring(IWGSC v1.0).
-## SNP position
+### SNP position
 At first, convert VCF file to input format.
 ```
 python3 Vcf2SNP_position.py <Input_file.vcf> <Output_file.tsv>
@@ -84,7 +81,7 @@ Rscript Plot_SNP_position.R <Input_file.tsv> <Output_prefix>
 ```
 - The output named <output_prefix>\_chr<1A~7D>.png will be generated.
 
-## SNP density
+### SNP density
 Count the number of SNPs per each window
 ```
 python3 Count_SNPs_per_window.py <Window_size> <Input.vcf>
