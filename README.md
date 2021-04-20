@@ -1,6 +1,6 @@
 # WheatGammaIrradiationMutGenomeSeq
 This is the source code for the following purposes.  
-**1. Calculating and plotting the moving average of depth-of-coverage.**
+**1. Showing the moving average of depth-of-coverage.**
  - [Plot the moving average for each of the two samples.](https://github.com/ShoyaKomura/WheatGammaIrradiationMutGenomeSeq/blob/main/README.md#plot-the-moving-average-for-each-of-the-two-samples)
  - [Calculate and plot the difference(delta-depth) between two samples.](https://github.com/ShoyaKomura/WheatGammaIrradiationMutGenomeSeq/blob/main/README.md#plot-delta-depth-of-two-samples)
 
@@ -8,7 +8,7 @@ This is the source code for the following purposes.
  - [Plot SNP position](https://github.com/ShoyaKomura/WheatGammaIrradiationMutGenomeSeq/blob/main/README.md#plot-snp-position)
  - [Plot SNP density](https://github.com/ShoyaKomura/WheatGammaIrradiationMutGenomeSeq/blob/main/README.md#plot-snp-density)
 
-## 1. Calculate and plot moving average of depth-of-coverage
+## 1. Showing the moving average of depth-of-coverage
 ## Plot the moving average for each of the two samples.
 ### Calculate moving average  
 At first, count read depth at all position from BAM.
