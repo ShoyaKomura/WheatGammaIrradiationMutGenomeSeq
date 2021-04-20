@@ -4,7 +4,7 @@ This is the source code for the following purposes.
  - [Plot the moving average for each of the two samples.](https://github.com/ShoyaKomura/WheatGammaIrradiationMutGenomeSeq/blob/main/README.md#plot-the-moving-average-for-each-of-the-two-samples)
  - [Calculate and plot the difference(delta-depth) between two samples.](https://github.com/ShoyaKomura/WheatGammaIrradiationMutGenomeSeq/blob/main/README.md#plot-delta-depth-of-two-samples)
 
-  **2. Show snp position or snp density over the chromosomes of wheat.**
+  **2. Show snp position or snp density over the chromosomes of Chinese Spring(IWGSC v1.0).**
  - [Plot SNP position](https://github.com/ShoyaKomura/WheatGammaIrradiationMutGenomeSeq/blob/main/README.md#plot-snp-position)
  - [Plot SNP density](https://github.com/ShoyaKomura/WheatGammaIrradiationMutGenomeSeq/blob/main/README.md#plot-snp-density)
 
