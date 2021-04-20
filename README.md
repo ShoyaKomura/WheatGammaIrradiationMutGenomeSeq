@@ -1,5 +1,5 @@
 # WheatGammaIrradiationMutGenomeSeq
-This is the source code for the following purposes.  
+Here is a source code repository for the following purpose, targeting wheat.  
  <br>
 **1. Showing the moving average of depth-of-coverage.**
  - [The moving average for each of the two samples.](https://github.com/ShoyaKomura/WheatGammaIrradiationMutGenomeSeq/blob/main/README.md#plot-the-moving-average-for-each-of-the-two-samples)
