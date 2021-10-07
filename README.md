@@ -69,7 +69,7 @@ Rscript Plot_DeltaDepth.R <Calculated_delta-depth.tsv> <Output_prefix>
 ### SNP position
 At first, convert VCF file to input format.
 ```
-python3 Vcf2SNP_position.py <Input_file.vcf> <Output_file.tsv>
+python3 Count_SNPs_per_bin.py <Input_file.vcf> <Output_file.tsv>
 ```
 - `<Output_file_name.tsv>` : columns in this order.
   - chromosome
