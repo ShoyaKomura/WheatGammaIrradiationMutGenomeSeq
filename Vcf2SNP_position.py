@@ -1,6 +1,6 @@
-## Calculate number of SNPs per window.
+## Extract SNPs position.
 ## <usage>
-## python3 Count_SNPs_per_window.py <window_size> <input_file.vcf> <output_name>
+## python3 Vcf2SNP_position.py <input_file.vcf> <output_name>
 
 import pandas as pd
 import re
