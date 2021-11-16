@@ -58,7 +58,13 @@ python3 Calc_DeltaDepth.py <Sample1_MovingAverage_merged.tsv> <Sample2_MovingAve
   - 95% confidence line
   - 99% confidence line
   - differencee of read depth(delta-depth) between Sample1 and Sample2 at each window
- 
+```
+To estimate the deletion, use a program such as awk to extract regions that exceed the 95% or 99% confidence interval, and then run the following.
+```
+python Arange_deletion_region.py <Step_size> <Input_file_name.tsv> <Output_file_name.tsv>
+```
+
+
 ### Plot delta-depth
 ```
 Rscript Plot_DeltaDepth.R <Calculated_delta-depth.tsv> <Output_prefix>
