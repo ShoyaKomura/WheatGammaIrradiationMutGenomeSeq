@@ -18,7 +18,7 @@ for (file_name in list){
     library(ggplot2); theme_set(theme_bw())
     df4 <- mutate(df2, y_max = max(mean_gap)*1.05)
     df5 <- mutate(df4, y_min = min(mean_gap)*-1.05)
-    chr_length <- tail(df3$pos, n=1)
+    chr_length <- tail(df5$pos, n=1)
     
     p<-ggplot (NULL) +
       geom_line(data= df5, aes(x=df5$pos/1000000, y=df5$mean_gap), colour='black')+
