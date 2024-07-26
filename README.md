@@ -90,7 +90,7 @@ Rscript Plot_SNP_position.R <Input_file.tsv> <Output_prefix>
 ### SNP density
 Count the number of SNPs per each window
 ```
-python3 Count_SNPs_per_window.py <Window_size> <Input.vcf>
+python3 Count_SNPs_per_window_v2.py <window_size (bp)> <reference.fai> <input_file.vcf> <output_file.tsv>
 ```
 - The output file `Number_of_SNPs.tsv` will be generated.
   - `Number_of_SNPs.tsv`: columns in this order.
